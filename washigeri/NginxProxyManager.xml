@@ -66,9 +66,9 @@
             <Mode>rw</Mode>
         </Volume>
     </Data><!-- Volume Mappings -->
-    <Config Name="Config Directory" Target="/data" Default="/mnt/user/appdata/nginx-proxy-manager/data" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.<br>Container path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
-    <Config Name="Let's Encrypt Directory" Target="/etc/letsencrypt" Default="/mnt/user/appdata/NginxProxyManager/letsencrypt" Mode="rw" Description="This is where the application stores Let's Encrypt information.<br>Container path: /etc/letsencrypt" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
-    <Config Name="Config Directory" Target="/app/config" Default="/mnt/user/appdata/nginx-proxy-manager/config" Mode="rw" Description="This is where the application stores its configuration JSON file.<br>Container path: /app/config" Type="Path" Display="advanced-hide" Required="true" Mask="false"/><!-- Port Mappings -->
+    <Config Name="Config Directory" Target="/data" Default="/mnt/user/appdata/nginx-proxy-manager/data" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.Container path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
+    <Config Name="Let's Encrypt Directory" Target="/etc/letsencrypt" Default="/mnt/user/appdata/NginxProxyManager/letsencrypt" Mode="rw" Description="This is where the application stores Let's Encrypt information.Container path: /etc/letsencrypt" Type="Path" Display="advanced-hide" Required="true" Mask="false"/>
+    <Config Name="Config Directory" Target="/app/config" Default="/mnt/user/appdata/nginx-proxy-manager/config" Mode="rw" Description="This is where the application stores its configuration JSON file.Container path: /app/config" Type="Path" Display="advanced-hide" Required="true" Mask="false"/><!-- Port Mappings -->
     <Config Name="Web UI Port" Target="81" Default="8081" Mode="tcp" Description="Port used to access the web interface of the application." Type="Port" Display="always" Required="true" Mask="false"/>
     <Config Name="HTTP Port" Target="80" Default="80443" Mode="tcp" Description="Port used to serve HTTP requests." Type="Port" Display="always" Required="true" Mask="false"/>
     <Config Name="HTTPs Port" Target="80" Default="8080" Mode="tcp" Description="Port used to serve HTTPs requests." Type="Port" Display="always" Required="true" Mask="false"/>
