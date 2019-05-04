@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Alpine-MariaDB</Name>
+  <Repository>yobasystems/alpine-mariadb</Repository>
+  <Registry>https://hub.docker.com/r/yobasystems/alpine-mariadb</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/yobasystems/alpine-mariadb</Support>
+  <Project>https://mariadb.org/</Project>
+  <Overview>MariaDB Server is one of the most popular database servers in the world. It’s made by the original developers of MySQL and guaranteed to stay open source. Notable users include Wikipedia, WordPress.com and Google.
+
+
+
+MariaDB turns data into structured information in a wide array of applications, ranging from banking to websites. It is an enhanced, drop-in replacement for MySQL. MariaDB is used because it is fast, scalable and robust, with a rich ecosystem of storage engines, plugins and many other tools make it very versatile for a wide variety of use cases.
+
+
+
+MariaDB is developed as open source software and as a relational database it provides an SQL interface for accessing data. The latest versions of MariaDB also include GIS and JSON features.
+
+
+
+Alpine Linux is a Linux distribution built around musl libc and BusyBox. The image is only 5 MB in size and has access to a package repository that is much more complete than other BusyBox based images. This makes Alpine Linux a great image base for utilities and even production applications. Read more about Alpine Linux here and you can see how their mantra fits in right at home with Docker images.</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/mariadb-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1556992029</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>MariaDB Server is one of the most popular database servers in the world. It’s made by the original developers of MySQL and guaranteed to stay open source. Notable users include Wikipedia, WordPress.com and Google.
+
+
+
+MariaDB turns data into structured information in a wide array of applications, ranging from banking to websites. It is an enhanced, drop-in replacement for MySQL. MariaDB is used because it is fast, scalable and robust, with a rich ecosystem of storage engines, plugins and many other tools make it very versatile for a wide variety of use cases.
+
+
+
+MariaDB is developed as open source software and as a relational database it provides an SQL interface for accessing data. The latest versions of MariaDB also include GIS and JSON features.
+
+
+
+Alpine Linux is a Linux distribution built around musl libc and BusyBox. The image is only 5 MB in size and has access to a package repository that is much more complete than other BusyBox based images. This makes Alpine Linux a great image base for utilities and even production applications. Read more about Alpine Linux here and you can see how their mantra fits in right at home with Docker images.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3306</HostPort>
+        <ContainerPort>3306</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/mariadb-alpine</HostDir>
+      <ContainerDir>/var/lib/mysql</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>MYSQL_ROOT_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>MYSQL_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>MYSQL_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>MYSQL_DATABASE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Database files" Target="/var/lib/mysql" Default="/mnt/user/appdata/mariadb-alpine" Mode="rw" Description="Database files" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/mariadb-alpine</Config>
+  <Config Name="MariaDB root password" Target="MYSQL_ROOT_PASSWORD" Default="password" Mode="" Description="Specify the root password for Mariadb" Type="Variable" Display="always" Required="true" Mask="true">test</Config>
+  <Config Name="MySQL User" Target="MYSQL_USER" Default="" Mode="" Description="specify the User for the database" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MySQL User password" Target="MYSQL_PASSWORD" Default="" Mode="" Description="Specify the User password for the database" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Databse Name" Target="MYSQL_DATABASE" Default="" Mode="" Description="Specify the name of the database" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="MariaDB Port" Target="3306" Default="3306" Mode="tcp" Description="MariaDB Port" Type="Port" Display="always" Required="true" Mask="false">3306</Config>
+</Container>

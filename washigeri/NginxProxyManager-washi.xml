@@ -4,32 +4,53 @@
     <Repository>jc21/nginx-proxy-manager</Repository>
     <Registry>https://hub.docker.com/r/jc21/nginx-proxy-manager/</Registry>
     <Network>bridge</Network>
-    <MyIP/>
     <Shell>sh</Shell>
     <Privileged>false</Privileged>
-    <Support/>
-    <Project/>
+    <Support>https://github.com/jc21/nginx-proxy-manager/issues</Support>
+    <Project>https://github.com/jc21/nginx-proxy-manager</Project>
     <Overview>This project comes as a pre-built docker image that enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.
+
+
+
+
 
 
 
         Project Goal
 
+
+
         I created this project to fill a personal need to provide users with a easy way to accomplish reverse proxying hosts with SSL termination and it had to be so easy that a monkey could do it. This goal hasn't changed. While there might be advanced options they are optional and the project should be as simple as possible so that the barrier for entry here is low.
+
+
+
+
 
 
 
         Features
 
+
+
         Beautiful and Secure Admin Interface based on Tabler
+
+
 
         Easily create forwarding domains, redirections, streams and 404 hosts without knowing anything about Nginx
 
+
+
         Free SSL using Let's Encrypt or provide your own custom SSL certificates
+
+
 
         Access Lists and basic HTTP Authentication for your hosts
 
+
+
         Advanced Nginx configuration available for super users
+
+
 
         User management, permissions and audit log</Overview>
     <Category/>
@@ -39,30 +60,52 @@
     <ExtraParams/>
     <PostArgs/>
     <CPUset/>
-    <DateInstalled>1556990878</DateInstalled>
+    <DateInstalled>1556991544</DateInstalled>
     <DonateText/>
     <DonateLink/>
     <Description>This project comes as a pre-built docker image that enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.
 
 
 
+
+
+
+
         Project Goal
+
+
 
         I created this project to fill a personal need to provide users with a easy way to accomplish reverse proxying hosts with SSL termination and it had to be so easy that a monkey could do it. This goal hasn't changed. While there might be advanced options they are optional and the project should be as simple as possible so that the barrier for entry here is low.
 
 
 
+
+
+
+
         Features
+
+
 
         Beautiful and Secure Admin Interface based on Tabler
 
+
+
         Easily create forwarding domains, redirections, streams and 404 hosts without knowing anything about Nginx
+
+
 
         Free SSL using Let's Encrypt or provide your own custom SSL certificates
 
+
+
         Access Lists and basic HTTP Authentication for your hosts
 
+
+
         Advanced Nginx configuration available for super users
+
+
 
         User management, permissions and audit log</Description>
     <Networking>
@@ -92,7 +135,7 @@
             <Mode>rw</Mode>
         </Volume>
         <Volume>
-            <HostDir>/mnt/user/appdata/NginxProxyManager/letsencrypt</HostDir>
+            <HostDir>/mnt/user/appdata/nginx-proxy-manager/letsencrypt</HostDir>
             <ContainerDir>/etc/letsencrypt</ContainerDir>
             <Mode>rw</Mode>
         </Volume>
@@ -108,6 +151,6 @@
     <Config Name="HTTP Port" Target="80" Default="8080" Mode="tcp" Description="Port used to serve HTTP requests." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
     <Config Name="HTTPs Port" Target="443" Default="80443" Mode="tcp" Description="Port used to serve HTTPs requests." Type="Port" Display="always" Required="true" Mask="false">8043</Config>
     <Config Name="Config Directory" Target="/app/config" Default="/mnt/user/appdata/nginx-proxy-manager/config" Mode="rw" Description="This is where the application stores its configuration JSON file.Container path: /app/config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/nginx-proxy-manager/config</Config>
-    <Config Name="Let's Encrypt Directory" Target="/etc/letsencrypt" Default="/mnt/user/appdata/NginxProxyManager/letsencrypt" Mode="rw" Description="This is where the application stores Let's Encrypt information.Container path: /etc/letsencrypt" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/NginxProxyManager/letsencrypt</Config>
+    <Config Name="Let's Encrypt Directory" Target="/etc/letsencrypt" Default="/mnt/user/appdata/nginx-proxy-manager/letsencrypt" Mode="rw" Description="This is where the application stores Let's Encrypt information.Container path: /etc/letsencrypt" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/nginx-proxy-manager/letsencrypt</Config>
     <Config Name="Data Directory" Target="/data" Default="/mnt/user/appdata/nginx-proxy-manager/data" Mode="rw" Description="This is where the application stores its configuration, log and any files needing persistency.Container path: /data" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/nginx-proxy-manager/data</Config>
 </Container>
