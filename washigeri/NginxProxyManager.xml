@@ -2,8 +2,7 @@
 <Containers>
     <Name>NginxProxyManager</Name>
     <Repository>jc21/nginx-proxy-manager</Repository>
-    <Registry>https://hub.docker.com/r/jc21/nginx-proxy-manager/</Registry>
-    <Network>bridge</Network>
+    <Registry>https://hub.docker.com/r/jc21/nginx-proxy-manager/</Registry><!-- <Network>bridge</Network> -->
     <Privileged>false</Privileged>
     <Project>https://github.com/jc21/nginx-proxy-manager</Project>
     <Support>https://github.com/jc21/nginx-proxy-manager/issues</Support>
@@ -24,26 +23,12 @@
     <Category>Network:Web Network:Proxy Tools:</Category>
     <WebUI>http://[IP]:[PORT:81]</WebUI>
     <Description>
-    Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.
-    [br][br]
-    Also, being based on Alpine Linux, size of this container
-    is very small (less than 100MB in download size).
-    [br][br][span][/span]
-    For a complete documentation of this container, see
-    [a href="https://github.com/jlesage/docker-nginx-proxy-manager/blob/master/README.md"]
-    https://github.com/jlesage/docker-nginx-proxy-manager/blob/master/README.md[/a].
-    [br][br]
-    [span style='color: red;'][b]Note:[/b][/span] For this container to be
-    accessible from the internet, make sure ports [b]80[/b] and [b]443[/b] on
-    the internet side of your router are properly forwarded to this container.
-    See the documentation for more details.[br][br]
-    [span style='color: red;'][b]Note:[/b][/span] After a fresh install, login
-    to the management interface using the following credentials:
-    [b]admin@example.com[/b]/[b]changeme[/b].
+    Custom nginx
   </Description>
     <Icon>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/nginx-proxy-manager-icon.png</Icon>
     <Beta>False</Beta>
     <Date>2019-05-04</Date>
+    <Changes></Changes>
     <Networking>
         <Mode>bridge</Mode>
         <Publish>
