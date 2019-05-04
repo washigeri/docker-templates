@@ -6,6 +6,7 @@
     <Privileged>false</Privileged>
     <Project>https://github.com/jc21/nginx-proxy-manager</Project>
     <Support>https://github.com/jc21/nginx-proxy-manager/issues</Support>
+    <Network>bridge</Network>
     <Overwiew>
     This project comes as a pre-built docker image that enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.
 
